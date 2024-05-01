@@ -26,7 +26,7 @@
     "types"
   ],
   "scripts": {
-    "build": "TS_NODE_TRANSPILE_ONLY=1 hardhat compile",
+    "build": "TS_NODE_TRANSPILE_ONLY=1 hardhat compile && mkdir -p public && cp -R artifacts public/artifacts",
     "console": "hardhat console",
     "mainnet:deploy": "hardhat --network mainnet deploy",
     "mainnet:verify": "hardhat --network mainnet etherscan-verify --license GPL-3.0 --force-license",
